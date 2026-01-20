@@ -8,6 +8,8 @@
   <title>Avi Tripathi</title>
   <link rel="stylesheet" href="styles.css">
   <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="transitions.js" defer></script>
+  <script type="text/javascript" src="sidebar-tint.js" defer></script>
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <meta property="og:image" content="images/0900 (1).png">
 <meta property="og:image:type" content="image/png">
@@ -30,17 +32,26 @@
   <div class="primary-header" ;>
 
 
-    <a href="index.html">
-      <div class="logo">
-
-        <img src="images/AVI LOGO.png" width="70px" height="auto">
-
+    <div class="sidebar-content">
+      
+      <div class="sidebar-profile">
+        <img src="images/AB01A4D5-209D-4059-8ABD-AC101F07AEBB_1_201_a.jpeg" alt="Profile Photo" class="profile-photo">
       </div>
 
+      <div class="sidebar-section-main">
+        <p class="sidebar-intro-statement">Hi, I'm <span class="text-white">Avi</span> — an engineering student & designer crafting thoughtful <span class="text-white">digital</span> and <span class="text-white">physical</span> experiences.</p>
+      </div>
 
-    </a>
+      <div class="sidebar-section-main">
+        <h2 class="sidebar-label">Experience</h2>
+        <div class="company-logos">
+          <div class="company-logo-placeholder"></div>
+          <div class="company-logo-placeholder"></div>
+          <div class="company-logo-placeholder"></div>
+        </div>
+      </div>
 
-
+    </div>
 
   </div>
 
@@ -70,67 +81,194 @@
     <div class="all">
 
 
-      <a href="./engineering_design.html" id="graphic_dot"></a>
-
-
-      <div id="GRAPHIC_DESIGN">
-
-        <p> ENGINEERING DESIGN</p>
-
-      </div>
-
-
-
-      <div><a href="./graphic_design.html" id="engineering_dot"></a></div>
-
-      <div id="ENGINEERING_DESIGN">
-
-        <p>  PERSONAL PROJECTS </p>
-
-      </div>
-
-
-
-
-      <a id="about_me_dot"></a>
-      <div id="ABOUT">
-
-        <p> ABOUT ME</p>
-
-      </div>
-
-
-
-      <div id="intro">
-
-        <p> Hi, I'm Avi Tripathi and this is my workstation.</p>
-
-      </div>
-
-
-      <div id="instruction_circle">
-
-        <p> CLICK ON ANY CIRCLE TO EXPLORE</p>
-
-      </div>
-
-      <div id="instruction_reel">
-
-        <p> </p>
-
-      </div>
-
     </div>
 
-    <div>
+    <!-- CURRENTLY WORKING ON ROW -->
+    <div class="current-row">
+      <div class="current-box current-label">
+        <p>I'm currently working on</p>
+      </div>
+      <a href="#" class="current-box current-article">
+        <img src="images/placeholder1.jpg" alt="">
+        <div class="current-article-text">
+          <h4>Project Title</h4>
+          <p>Brief description of the project goes here.</p>
+        </div>
+      </a>
+      <a href="#" class="current-box current-article">
+        <img src="images/placeholder2.jpg" alt="">
+        <div class="current-article-text">
+          <h4>Project Title</h4>
+          <p>Brief description of the project goes here.</p>
+        </div>
+      </a>
+    </div>
 
-      <!-- <img src="web up angle.png" width="100%" height="auto"> -->
+    <!-- NEXUS -->
+    <div class="project-bento bento-wide" data-tint="rgba(40, 70, 90, 0.5)" data-skills="product-design,cad,research,prototyping">
+      <div class="bento-grid-wide bento-video-top">
+        <div class="bento-item bento-video">
+          <video src="images/Untitled video - Made with Clipchamp (1) (1) (1).mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="bento-item bento-text">
+          <p class="bento-description">I did the <span class="highlight" style="color: rgb(120, 160, 180)">vehicle design</span>, <span class="highlight" style="color: rgb(120, 160, 180)">user experience</span>, <span class="highlight" style="color: rgb(120, 160, 180)">video rendering</span>, and <span class="highlight" style="color: rgb(120, 160, 180)">animation</span> for this urban mobility concept.</p>
+          <div class="bento-tools">
+            <div class="tool-tag"><img src="images/tools/fusion360.png" alt=""><span>Fusion 360</span></div>
+            <div class="tool-tag"><img src="images/tools/blender.png" alt=""><span>Blender</span></div>
+            <div class="tool-tag"><img src="images/tools/figma.png" alt=""><span>Figma</span></div>
+            <div class="tool-tag"><img src="images/tools/aftereffects.png" alt=""><span>After Effects</span></div>
+          </div>
+        </div>
+        <div class="bento-item">
+          <img src="images/Screenshot 2023-03-10 095008.png" alt="NEXUS">
+        </div>
+      </div>
+    </div>
 
+    <!-- MUSIC TECH BENTO -->
+    <div class="project-bento bento-wide" data-tint="rgba(80, 100, 80, 0.5)" data-skills="electronics,prototyping">
+      <div class="bento-grid-wide">
+        <div class="bento-item bento-text">
+          <p class="bento-description">I did the <span class="highlight" style="color: rgb(150, 200, 150)">hardware prototyping</span>, <span class="highlight" style="color: rgb(150, 200, 150)">signal processing</span>, and <span class="highlight" style="color: rgb(150, 200, 150)">interface design</span> for these music technology experiments.</p>
+          <div class="bento-tools">
+            <div class="tool-tag"><img src="images/tools/arduino.png" alt=""><span>Arduino</span></div>
+            <div class="tool-tag"><img src="images/tools/ableton.png" alt=""><span>Ableton</span></div>
+          </div>
+        </div>
+        <div class="bento-item">
+          <img src="images/TQu0XCFneemf8rRFW2xFCVTs8.avif" alt="Music Tech">
+        </div>
 
-      <video class="video" src="images/colour grade 1 (1).mp4" frameborder="0" allowfullscreen autoplay muted loop>
+      </div>
+    </div>
 
+    <!-- MUSIC TECH BENTO (VIDEO DUPLICATE) -->
+    <div class="project-bento bento-wide" data-tint="rgba(80, 100, 80, 0.5)" data-skills="electronics,prototyping">
+      <div class="bento-grid-wide">
+        <div class="bento-item bento-text">
+          <p class="bento-description">I did the <span class="highlight" style="color: rgb(150, 200, 150)">hardware prototyping</span>, <span class="highlight" style="color: rgb(150, 200, 150)">signal processing</span>, and <span class="highlight" style="color: rgb(150, 200, 150)">interface design</span> for these music technology experiments.</p>
+          <div class="bento-tools">
+            <div class="tool-tag"><img src="images/tools/arduino.png" alt=""><span>Arduino</span></div>
+            <div class="tool-tag"><img src="images/tools/ableton.png" alt=""><span>Ableton</span></div>
+          </div>
+        </div>
+        <div class="bento-item bento-video">
+          <iframe width="100%" height="100%" style="aspect-ratio:16/9;min-height:400px;border-radius:12px;border:none;" src="https://www.youtube.com/embed/Wux71BLlxa4?autoplay=1&mute=1&rel=0&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
 
-        <!-- <img src="images/1000 (19).png" alt="" width="100%"> -->
+    <!-- 3D ART BENTO -->
+    <div class="project-bento bento-wide" data-tint="rgba(100, 70, 120, 0.5)" data-skills="3d,graphic-design">
+      <div class="bento-grid-wide bento-video-top">
+        <div class="bento-item bento-video">
+          <video src="images/colour grade 1 (1).mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="bento-item bento-text">
+          <p class="bento-description">I did the <span class="highlight" style="color: rgb(180, 150, 200)">3D modeling</span>, <span class="highlight" style="color: rgb(180, 150, 200)">lighting design</span>, and <span class="highlight" style="color: rgb(180, 150, 200)">rendering</span> for these event visuals and brand concepts.</p>
+          <div class="bento-tools">
+            <div class="tool-tag"><img src="images/tools/blender.png" alt=""><span>Blender</span></div>
+            <div class="tool-tag"><img src="images/tools/aftereffects.png" alt=""><span>After Effects</span></div>
+            <div class="tool-tag"><img src="images/tools/photoshop.png" alt=""><span>Photoshop</span></div>
+          </div>
+        </div>
+        <div class="bento-item">
+          <img src="/images/Eventbrite Final Hero V1 1-min.png" alt="Open House">
+        </div>
+      </div>
+    </div>
+
+    <!-- PHOTOGRAPHY ROW -->
+    <div class="current-row">
+      <div class="current-box current-label">
+        <p>And some of my photography, if you're interested...</p>
+      </div>
+      <div class="current-box photo-box">
+        <img src="images/IMG_5759.JPG" alt="">
+      </div>
+      <div class="current-box photo-box">
+        <img src="images/IMG_5755.JPG" alt="">
+      </div>
+    </div>
+
+    <!-- TOP 9 ALBUMS ROW -->
+    <div class="albums-row">
+      <div class="albums-label-box">
+        <p>And if you care, my top 9 albums</p>
+      </div>
+      <div class="albums-grid">
+        <div class="album-cover"><img src="images/albums/album1.jpg" alt=""></div>
+        <div class="album-cover"><img src="images/albums/album2.jpg" alt=""></div>
+        <div class="album-cover"><img src="images/albums/album3.jpg" alt=""></div>
+        <div class="album-cover"><img src="images/albums/album4.jpg" alt=""></div>
+        <div class="album-cover"><img src="images/albums/album5.jpg" alt=""></div>
+        <div class="album-cover"><img src="images/albums/album6.jpg" alt=""></div>
+        <div class="album-cover"><img src="images/albums/album7.jpg" alt=""></div>
+        <div class="album-cover"><img src="images/albums/album8.jpg" alt=""></div>
+        <div class="album-cover"><img src="images/albums/album9.jpg" alt=""></div>
+      </div>
+    </div>
+
+    <!-- ARCHIVE ROW -->
+    <div class="archive-section">
+      <div class="archive-label-box">
+        <p>An archive of designs and works by me</p>
+      </div>
+      <div class="archive-grid">
+        <div class="archive-item"><img src="images/0001 (45).png" alt=""></div>
+        <div class="archive-item"><img src="images/render_output (25) (1) (1).png" alt=""></div>
+        <div class="archive-item"><img src="images/seat cover.png" alt=""></div>
+        <div class="archive-item"><img src="images/0001 (64).png" alt=""></div>
+        <div class="archive-item"><img src="images/Sopabox Final.png" alt=""></div>
+        <div class="archive-item"><img src="images/spot mockup.png" alt=""></div>
+        <div class="archive-item"><img src="images/app des butterfly.png" alt=""></div>
+        <div class="archive-item"><img src="images/anouncemnt post.png" alt=""></div>
+        <div class="archive-item"><img src="images/0001 (16).png" alt=""></div>
+        <div class="archive-item"><img src="images/Eventbrite Final Hero V1 1-min.png" alt=""></div>
+        <div class="archive-item"><img src="images/spot dev.png" alt=""></div>
+        <div class="archive-item"><img src="images/spot logs.png" alt=""></div>
+        <div class="archive-item"><img src="images/updated promo.png" alt=""></div>
+        <div class="archive-item"><img src="images/web des.png" alt=""></div>
+        <div class="archive-item"><img src="images/wf.png" alt=""></div>
+        <div class="archive-item"><img src="images/full thng.5.jpg" alt=""></div>
+        <div class="archive-item"><img src="images/full thng.51.jpg" alt=""></div>
+        <div class="archive-item"><img src="images/full thng.6.jpg" alt=""></div>
+        <div class="archive-item"><img src="images/0001 - 2023-02-23T002643.808.png" alt=""></div>
+        <div class="archive-item"><img src="images/0001 - 2023-02-24T003000.468.png" alt=""></div>
+        <div class="archive-item"><img src="images/0009 (37) 2-min.png" alt=""></div>
+        <div class="archive-item"><img src="images/0020.png" alt=""></div>
+        <div class="archive-item"><img src="images/0900 (1).png" alt=""></div>
+        <div class="archive-item"><img src="images/0915 (3).png" alt=""></div>
+        <div class="archive-item"><img src="images/BF COV.png" alt=""></div>
+        <div class="archive-item"><img src="images/Group 1.png" alt=""></div>
+        <div class="archive-item"><img src="images/Group 2-min.png" alt=""></div>
+        <div class="archive-item"><img src="images/Group 11.png" alt=""></div>
+        <div class="archive-item"><img src="images/IMG_2477 1.png" alt=""></div>
+        <div class="archive-item"><img src="images/IMG_5414.JPG" alt=""></div>
+        <div class="archive-item"><img src="images/IMG_6306.jpg" alt=""></div>
+        <div class="archive-item"><img src="images/IMG_6595.jpg" alt=""></div>
+        <div class="archive-item"><img src="images/IMG_6596.jpg" alt=""></div>
+        <div class="archive-item"><img src="images/Iso 3.JPG" alt=""></div>
+        <div class="archive-item"><img src="images/Rectangle 24.png" alt=""></div>
+        <div class="archive-item"><img src="images/Screenshot 2022-12-12 013251.png" alt=""></div>
+        <div class="archive-item"><img src="images/Screenshot 2023-01-05 002437.png" alt=""></div>
+        <div class="archive-item"><img src="images/Screenshot 2023-01-05 003058.png" alt=""></div>
+        <div class="archive-item"><img src="images/The Smart Dealer Poster-min.jpg" alt=""></div>
+        <div class="archive-item"><img src="images/Untitled4.JPG" alt=""></div>
+        <div class="archive-item"><img src="images/dt wb fn.png" alt=""></div>
+        <div class="archive-item"><img src="images/dt wb.png" alt=""></div>
+        <div class="archive-item"><img src="images/dt ws id.png" alt=""></div>
+        <div class="archive-item"><img src="images/image 15.png" alt=""></div>
+        <div class="archive-item"><img src="images/render_output (5) (1).jpeg" alt=""></div>
+        <div class="archive-item"><img src="images/whiteboarddd.JPG" alt=""></div>
+        <div class="archive-item"><img src="images/woahbm.png" alt=""></div>
+        <div class="archive-item"><img src="images/77E9ADF9-740F-4C20-8B13-50B7ED00EB3F_1_201_a.jpeg" alt=""></div>
+        <div class="archive-item"><img src="images/D6AABE9C-CCC5-4CBB-A00A-2EE2312B6C28_1_201_a.jpeg" alt=""></div>
+        <div class="archive-item"><img src="images/IMG_20221008_120020.jpg" alt=""></div>
+        <div class="archive-item"><img src="images/IMG_5158.jpg" alt=""></div>
+        <div class="archive-item"><img src="images/IMG_5159.jpg" alt=""></div>
+        <div class="archive-item"><img src="images/729a985b-8418-432b-accb-5e940446c2ba.jpg" alt=""></div>
+      </div>
     </div>
 
     <div class="mob-cont">
@@ -150,8 +288,7 @@
 
   </div>
 
-
-
+  </div>
 
 
 
@@ -607,14 +744,6 @@ setTimeout(function () {
 
 
   </script>
-
-
-
-  <div class="footer">
-
-    <img class="log" src="images/AVI LOGO GREY.png" width="90vw" height="auto">
-
-  </div>
 
 
 
