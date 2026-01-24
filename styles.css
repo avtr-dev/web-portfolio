@@ -2106,7 +2106,551 @@ backdrop-filter: blur(1rem);
 
 }
 
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
 
+/* ===== TABLET LANDSCAPE (1024px - 1366px) ===== */
+@media only screen and (max-width: 1366px) and (min-width: 1025px) {
+  :root {
+    --bento-margin-x: 50px;
+  }
+
+  /* Reduce content margins */
+  .section-divider,
+  .project-bento,
+  .current-row,
+  .albums-row {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  /* Slightly smaller bento text */
+  .bento-description {
+    font-size: 20px;
+  }
+
+  /* 3-col grid: reduce fixed heights */
+  .bento-grid-3col .bento-item,
+  .bento-grid-3col .bento-text {
+    height: 300px;
+    max-height: 300px;
+  }
+}
+
+/* ===== TABLET PORTRAIT (768px - 1024px) ===== */
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  :root {
+    --bento-margin-x: 30px;
+  }
+
+  /* === SIDEBAR BECOMES HORIZONTAL BENTO BOX === */
+  .primary-header {
+    position: relative;
+    width: auto;
+    left: auto;
+    margin: 30px 30px 0 30px;
+    height: auto;
+    flex-direction: row;
+    padding: 20px 30px;
+    border-right: none;
+    border-bottom: none;
+    border-radius: var(--bento-radius);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-sizing: border-box;
+  }
+
+  .sidebar-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .sidebar-profile {
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .sidebar-section-main {
+    margin-bottom: 0;
+    flex: 1;
+  }
+
+  .sidebar-intro-statement {
+    font-size: 16px;
+  }
+
+  /* Hide nav dots on tablet */
+  .sidebar-nav-dots {
+    display: none;
+  }
+
+  /* === MAIN CONTENT ADJUSTMENTS === */
+  #parent {
+    margin-left: 0;
+  }
+
+  .section-divider,
+  .project-bento,
+  .current-row,
+  .albums-row {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  /* === GRID LAYOUTS: 3-col → 2-col === */
+  .bento-grid-3col {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bento-grid-3col .bento-item:nth-child(3) {
+    grid-column: span 2;
+  }
+
+  .bento-grid-3col .bento-item,
+  .bento-grid-3col .bento-text {
+    height: auto;
+    min-height: 250px;
+    max-height: none;
+  }
+
+  /* Wide grid adjustments */
+  .bento-grid-wide {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Text-left grid adjustments */
+  .bento-grid-text-left {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Current row: keep 2 columns but smaller gap */
+  .current-row {
+    gap: 12px;
+  }
+
+  /* Albums row */
+  .albums-row {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  /* Archive grid: 3 → 2 columns */
+  .archive-grid {
+    column-count: 2;
+  }
+
+  /* Video adjustments */
+  .bento-video--tall {
+    min-height: 400px;
+  }
+
+  /* Fix hardcoded margins */
+  .folio_title,
+  .container2,
+  .projects-container,
+  .projects-section,
+  .ParallaxVideo,
+  .vid_title,
+  .one-section {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* ===== LARGE MOBILE (480px - 768px) ===== */
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+  :root {
+    --bento-margin-x: 20px;
+  }
+
+  /* === SIDEBAR AS VERTICAL BENTO BOX === */
+  .primary-header {
+    position: relative;
+    width: auto;
+    left: auto;
+    margin: 20px 20px 0 20px;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 20px;
+    border-right: none;
+    border-bottom: none;
+    border-radius: var(--bento-radius);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-sizing: border-box;
+  }
+
+  .sidebar-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+  }
+
+  .sidebar-profile {
+    margin-bottom: 15px;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .sidebar-section-main {
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .sidebar-intro-statement {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  /* Links horizontal */
+  .sidebar-links {
+    flex-direction: row !important;
+    justify-content: center;
+    gap: 20px !important;
+  }
+
+  /* Hide nav dots */
+  .sidebar-nav-dots {
+    display: none;
+  }
+
+  /* === MAIN CONTENT === */
+  #parent {
+    margin-left: 0;
+  }
+
+  .section-divider,
+  .project-bento,
+  .current-row,
+  .albums-row {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  /* === ALL GRIDS → SINGLE COLUMN === */
+  .bento-grid-wide,
+  .bento-grid-3col,
+  .bento-grid-text-left {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-grid-wide .bento-item,
+  .bento-grid-3col .bento-item,
+  .bento-grid-wide .bento-item:nth-child(1),
+  .bento-grid-wide .bento-item:nth-child(3),
+  .bento-grid-3col .bento-item:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .bento-grid-3col .bento-item,
+  .bento-grid-3col .bento-text {
+    height: auto;
+    min-height: 200px;
+    max-height: none;
+  }
+
+  /* Current row: stack vertically */
+  .current-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* Albums row: stack */
+  .albums-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .albums-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  /* Archive: 2 columns */
+  .archive-grid {
+    column-count: 2;
+  }
+
+  /* Bento text adjustments */
+  .bento-description {
+    font-size: 18px;
+  }
+
+  .bento-text {
+    padding: 25px 20px;
+  }
+
+  /* Video boxes */
+  .bento-video--tall {
+    min-height: 300px;
+    aspect-ratio: 16/10;
+  }
+
+  /* Section divider */
+  .section-divider {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  /* Fix hardcoded margins */
+  .folio_title,
+  .container2,
+  .projects-container,
+  .projects-section,
+  .ParallaxVideo,
+  .vid_title,
+  .one-section {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* Hide old mobile elements */
+  .primary-header2 {
+    display: none !important;
+  }
+
+  .logo2 {
+    display: none !important;
+  }
+
+  #mobile-container {
+    display: none !important;
+  }
+}
+
+/* ===== SMALL MOBILE (< 480px) ===== */
+@media only screen and (max-width: 480px) {
+  :root {
+    --bento-margin-x: 15px;
+    --bento-gap: 6px;
+  }
+
+  /* === SIDEBAR: COMPACT BENTO BOX === */
+  .primary-header {
+    position: relative;
+    width: auto;
+    left: auto;
+    margin: 15px 15px 0 15px;
+    height: auto;
+    padding: 20px 15px;
+    border-right: none;
+    border-bottom: none;
+    border-radius: var(--bento-radius);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-sizing: border-box;
+  }
+
+  .sidebar-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  .sidebar-profile {
+    margin-bottom: 12px;
+  }
+
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .sidebar-intro-statement {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Links horizontal and smaller */
+  .sidebar-links {
+    flex-direction: row !important;
+    justify-content: center;
+    gap: 15px !important;
+    flex-wrap: wrap;
+  }
+
+  .sidebar-link {
+    font-size: 13px;
+  }
+
+  /* Hide nav dots */
+  .sidebar-nav-dots {
+    display: none;
+  }
+
+  /* === MAIN CONTENT === */
+  #parent {
+    margin-left: 0;
+  }
+
+  .section-divider,
+  .project-bento,
+  .current-row,
+  .albums-row {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  /* All grids single column */
+  .bento-grid-wide,
+  .bento-grid-3col,
+  .bento-grid-stacked,
+  .bento-grid-text-left,
+  .current-row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--bento-gap);
+  }
+
+  /* Remove grid spans */
+  .bento-grid-wide .bento-item,
+  .bento-grid-3col .bento-item,
+  .bento-grid-wide .bento-item:nth-child(1),
+  .bento-grid-wide .bento-item:nth-child(3),
+  .bento-grid-3col .bento-item:nth-child(3),
+  .bento-video-top .bento-item:nth-child(1),
+  .bento-video-top .bento-item:nth-child(3) {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+
+  /* Remove fixed heights */
+  .bento-grid-3col .bento-item,
+  .bento-grid-3col .bento-text,
+  .bento-grid .bento-item {
+    height: auto;
+    min-height: unset;
+    max-height: none;
+  }
+
+  /* Bento items responsive height */
+  .bento-item img {
+    height: auto;
+    aspect-ratio: 16/10;
+  }
+
+  /* Text boxes */
+  .bento-text {
+    padding: 20px 15px;
+  }
+
+  .bento-description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .bento-title {
+    font-size: 1.2rem;
+  }
+
+  /* Videos */
+  .bento-video--tall {
+    min-height: 220px;
+    aspect-ratio: 16/9;
+  }
+
+  .bento-video {
+    aspect-ratio: 16/9;
+  }
+
+  /* Albums row stacked */
+  .albums-row {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .albums-label-box {
+    padding: 20px;
+  }
+
+  .albums-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  /* Archive: 2 columns on small mobile */
+  .archive-grid {
+    column-count: 2;
+    column-gap: 4px;
+  }
+
+  .archive-item {
+    margin-bottom: 4px;
+  }
+
+  /* Section dividers */
+  .section-divider {
+    margin: 25px 15px 12px 15px;
+    padding: 0;
+  }
+
+  .section-divider-text {
+    font-size: 14px;
+  }
+
+  .section-divider-text img {
+    height: 24px !important;
+  }
+
+  /* Tool tags smaller */
+  .tool-tag {
+    font-size: 11px;
+    padding: 4px 10px 4px 6px;
+  }
+
+  .tool-tag img {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Current article cards */
+  .current-article img {
+    height: 100px;
+  }
+
+  .current-article-text h4 {
+    font-size: 13px;
+  }
+
+  /* Fix hardcoded margins */
+  .folio_title,
+  .container2,
+  .projects-container,
+  .projects-section,
+  .ParallaxVideo,
+  .vid_title,
+  .one-section {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* Hide old mobile elements - use new responsive instead */
+  .primary-header2 {
+    display: none !important;
+  }
+
+  .logo2 {
+    display: none !important;
+  }
+
+  #mobile-container {
+    display: none !important;
+  }
+}
 
 
 
@@ -3090,6 +3634,115 @@ backdrop-filter: blur(1rem);
   #popup-container2{
     display: none;
   }
+}
 
- 
+/* ========================================
+   RESPONSIVE OVERRIDES (Final Priority)
+   Ensures new responsive sidebar takes precedence
+   ======================================== */
+
+/* Override for tablet and below - ensure sidebar transforms to bento */
+@media only screen and (max-width: 1024px) {
+  .primary-header {
+    position: relative !important;
+    width: auto !important;
+    left: auto !important;
+    margin: 30px 30px 0 30px !important;
+    height: auto !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    border-radius: var(--bento-radius) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-sizing: border-box !important;
+  }
+
+  #parent {
+    margin-left: 0 !important;
+  }
+
+  /* Hide old mobile UI elements */
+  .primary-header2,
+  .logo2,
+  #mobile-container {
+    display: none !important;
+  }
+
+  /* Ensure hardcoded margins are removed */
+  .folio_title,
+  .container2,
+  .projects-container,
+  .projects-section,
+  .ParallaxVideo,
+  .vid_title,
+  .one-section {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+}
+
+/* Tablet portrait specific */
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .primary-header {
+    flex-direction: row !important;
+    padding: 20px 30px !important;
+  }
+
+  .sidebar-content {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 30px !important;
+  }
+
+  .profile-photo {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}
+
+/* Mobile specific */
+@media only screen and (max-width: 768px) {
+  .primary-header {
+    width: auto !important;
+    margin: 20px 20px 0 20px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 25px 20px !important;
+  }
+
+  .sidebar-content {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  /* All grids single column */
+  .bento-grid-wide,
+  .bento-grid-3col,
+  .bento-grid-text-left,
+  .current-row {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+/* Small mobile specific */
+@media only screen and (max-width: 480px) {
+  .primary-header {
+    width: auto !important;
+    margin: 15px 15px 0 15px !important;
+    padding: 20px 15px !important;
+  }
+
+  .profile-photo {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .section-divider,
+  .project-bento,
+  .current-row,
+  .albums-row {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
 }
