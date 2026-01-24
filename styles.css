@@ -755,6 +755,11 @@ body {
   letter-spacing: -0.2px;
 }
 
+/* Add equal gap below the last sidebar paragraph before the CV button */
+.sidebar-section-main .sidebar-intro-statement:last-of-type {
+  margin-bottom: 1.2em;
+}
+
 .text-white {
   color: rgb(255, 255, 255);
 }
@@ -912,7 +917,7 @@ body {
 }
 
 .bento-grid-wide.bento-equal {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
 }
 
 .bento-grid-wide.bento-media-large {
