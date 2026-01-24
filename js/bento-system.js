@@ -123,15 +123,15 @@ const BentoSystem = (function() {
   // ===== ALBUMS DATA =====
   // Top 9 albums - add/edit albums here
   const ALBUMS = [
-    'album1.jpg',
-    'album2.jpg',
-    'album3.jpg',
-    'album4.jpg',
-    'album5.jpg',
-    'album6.jpg',
-    'album7.jpg',
-    'album8.jpg',
-    'album9.jpg'
+    'Blonde_-_Frank_Ocean.jpg',
+    'Igor_-_Tyler,_the_Creator.jpg',
+    'Marvin-Gaye-Whats-Going-On-AlbumCover-web-optimised-820.jpg',
+    'ModalMusic.jpg',
+    'PiecesOfaMan_cover.jpg',
+    '81CzfbO4CrL.jpg',
+    '81W5Uwxo-ZL._UF894,1000_QL80_.jpg',
+    '812EgYpATnL.jpg',
+    'images.jpg'
   ];
 
   // ===== RENDER FUNCTIONS =====
@@ -185,7 +185,7 @@ const BentoSystem = (function() {
 
     container.innerHTML = ALBUMS.map(img => `
       <div class="album-cover">
-        <img src="images/albums/${img}" alt="" loading="lazy">
+        <img src="images/covers/${img}" alt="" loading="lazy">
       </div>
     `).join('');
   }

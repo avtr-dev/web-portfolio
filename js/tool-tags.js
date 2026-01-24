@@ -19,20 +19,23 @@ const ToolTags = {
       isLocal: true
     },
     photoshop: {
-      icon: 'photoshop/photoshop-original.svg',
-      label: 'Photoshop'
+      icon: 'photoshop-original.svg',
+      label: 'Photoshop',
+      isLocal: true
     },
     illustrator: {
       icon: 'illustrator/illustrator-plain.svg',
       label: 'Illustrator'
     },
     aftereffects: {
-      icon: 'aftereffects/aftereffects-original.svg',
-      label: 'After Effects'
+      icon: 'aftereffects-original.svg',
+      label: 'After Effects',
+      isLocal: true
     },
     blender: {
-      icon: 'blender/blender-original.svg',
-      label: 'Blender'
+      icon: 'blender-original.svg',
+      label: 'Blender',
+      isLocal: true
     },
     sketch: {
       icon: 'sketch/sketch-original.svg',

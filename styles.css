@@ -1,3 +1,26 @@
+/* Bento link button style for video/webapp links */
+.bento-link-btn {
+  margin-top: 0;
+  font-size: 13px;
+  font-weight: 400;
+  background-color: rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.7);
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 8px;
+  padding: 6px 14px 6px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+  outline: none;
+}
+.bento-link-btn:hover, .bento-link-btn:focus {
+  background-color: rgba(255,255,255,0.16);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.22);
+}
 /* Subtle small link for 'My Favourite Part' */
 .favourite-link {
   display: inline-block;
@@ -16,28 +39,32 @@
 html {
   scroll-behavior: smooth;
 }
-/* CV button styled like .tool-tag but with less border radius */
-.cv-tool-tag {
-  display: flex;
+/* CV button styled like .favourite-link but as a button */
+.cv-btn {
+  display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255,255,255,0.7);
   font-size: 13px;
   font-weight: 400;
-  padding: 6px 18px 6px 12px;
-  background-color: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.13);
+  padding: 6px 18px 6px 18px;
+  background-color: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.13);
   border-radius: 8px;
   font-family: inherit;
-  text-decoration: none;
-  margin-top: 1.5em;
+  cursor: pointer;
   transition: background 0.2s, color 0.2s, border 0.2s;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+  outline: none;
 }
-.cv-tool-tag:hover {
+.cv-btn:hover, .cv-btn:focus {
   background-color: rgba(255,255,255,0.16);
   color: #fff;
   border: 1px solid rgba(255,255,255,0.22);
+}
+.cv-btn-icon {
+  font-size: 16px;
+  line-height: 1;
 }
 /* ===== CSS VARIABLES ===== */
 :root {
@@ -104,15 +131,138 @@ html {
   text-decoration: none;
 }
 
+/* Link buttons - outline style with colored text, fill on hover */
+.tool-tag.tool-tag-link {
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid currentColor;
+  transition: background 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.tool-tag.tool-tag-link::before {
+  content: '↗';
+  margin-right: 5px;
+  font-size: 12px;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.tool-tag.tool-tag-link:hover::before {
+  transform: translate(1px, -1px);
+}
+
+.bento-accent--patentspace .tool-tag-link {
+  color: #fff;
+  border-color: var(--accent-patentspace);
+}
+.bento-accent--patentspace .tool-tag-link:hover {
+  background: rgba(30, 30, 30, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+}
+
+.bento-accent--setmixer .tool-tag-link {
+  color: #fff;
+  border-color: var(--accent-setmixer);
+}
+.bento-accent--setmixer .tool-tag-link:hover {
+  background: rgba(30, 30, 30, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #000;
+}
+
+.bento-accent--imperial .tool-tag-link {
+  color: #fff;
+  border-color: var(--accent-imperial);
+}
+.bento-accent--imperial .tool-tag-link:hover {
+  background: rgba(30, 30, 30, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+}
+
+.bento-accent--personal .tool-tag-link {
+  color: #fff;
+  border-color: var(--accent-personal);
+}
+.bento-accent--personal .tool-tag-link:hover {
+  background: rgba(30, 30, 30, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+}
+
 /* Legacy classes */
 .bento-accent--nexus .highlight { color: var(--accent-nexus); }
 .bento-accent--music .highlight { color: var(--accent-music); }
 .bento-accent--3d .highlight { color: var(--accent-3d); }
 
+/* ===== HOVER LINK OVERLAY ===== */
+.bento-hover-link {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.bento-hover-label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  bottom: auto;
+  right: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  font-weight: 400;
+  padding: 6px 18px 6px 12px;
+  background-color: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 8px;
+  font-family: inherit;
+  text-decoration: none;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+  z-index: 2;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+  background-color: rgba(255,255,255,0.16);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.22);
+
+.bento-hover-link:hover .bento-hover-label {
+  /* Always visible now */
+}
+
+.bento-accent--imperial .bento-hover-label {
+  color: var(--accent-imperial);
+}
+
+.bento-accent--patentspace .bento-hover-label {
+  color: var(--accent-patentspace);
+}
+
+.bento-accent--setmixer .bento-hover-label {
+  color: var(--accent-setmixer);
+}
+
+.bento-accent--personal .bento-hover-label {
+  color: var(--accent-personal);
+}
+
 /* ===== TALL VIDEO MODIFIER ===== */
 .bento-video--tall {
-  aspect-ratio: 16/9.5;
-  min-height: 600px;
+  aspect-ratio: 21/9;
+  min-height: 350px;
   max-width: 100%;
   overflow: hidden;
 }
@@ -132,6 +282,8 @@ html {
   flex-direction: column;
   gap: var(--bento-gap);
   width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .bento-grid-stacked .bento-item:first-child {
@@ -140,6 +292,8 @@ html {
 
 .bento-grid-stacked .bento-text {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* ===== 3-COLUMN BENTO GRID ===== */
@@ -500,7 +654,7 @@ body {
   font-size: 13px;
   font-weight: 100;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.7);
+  color: #fff;
   margin-bottom: 30px;
   text-transform: uppercase;
 }
@@ -831,6 +985,9 @@ body {
   background: rgba(30, 30, 30, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
+  overflow: hidden;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 .bento-description {
@@ -840,6 +997,9 @@ body {
   line-height: 1.5;
   margin: 0;
   text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 
 .bento-description .highlight {
@@ -882,13 +1042,14 @@ body {
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: 1rem;
+  max-width: 100%;
 }
 
 .tool-tag {
   display: flex;
   align-items: center;
   gap: 6px;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 12px;
   font-weight: 200;
   padding: 5px 12px 5px 8px;
