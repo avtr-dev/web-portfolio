@@ -1,3 +1,182 @@
+/* ===== CSS VARIABLES ===== */
+:root {
+  /* Layout */
+  --sidebar-width: 280px;
+  --bento-gap: 8px;
+  --bento-radius: 12px;
+  --bento-margin-x: 80px;
+  --bento-margin-y: 0;
+
+  /* Colors */
+  --color-bg: rgb(20, 20, 20);
+  --color-bg-card: rgba(255, 255, 255, 0.05);
+  --color-bg-sidebar: rgba(255, 255, 255, 0.08);
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-text: rgba(255, 255, 255, 0.9);
+  --color-text-muted: rgba(255, 255, 255, 0.55);
+
+  /* Accent Colors */
+  --accent-nexus: rgb(120, 160, 180);
+  --accent-music: rgb(150, 200, 150);
+  --accent-3d: rgb(180, 150, 200);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+}
+
+/* ===== ACCENT UTILITIES ===== */
+.bento-accent--nexus .highlight { color: var(--accent-nexus); }
+.bento-accent--music .highlight { color: var(--accent-music); }
+.bento-accent--3d .highlight { color: var(--accent-3d); }
+
+/* ===== TALL VIDEO MODIFIER ===== */
+.bento-video--tall {
+  aspect-ratio: 16/9.5;
+  min-height: 600px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.bento-video--tall video {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--bento-radius);
+}
+
+/* ===== STACKED BENTO GRID ===== */
+.bento-grid-stacked {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bento-gap);
+  width: 100%;
+}
+
+.bento-grid-stacked .bento-item:first-child {
+  width: 100%;
+}
+
+.bento-grid-stacked .bento-text {
+  width: 100%;
+}
+
+/* ===== 3-COLUMN BENTO GRID ===== */
+.bento-grid-3col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--bento-gap);
+  width: 100%;
+}
+
+.bento-grid-3col .bento-item {
+  height: 350px;
+}
+
+.bento-grid-3col .bento-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bento-grid-3col .bento-text {
+  height: 350px;
+  max-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ===== TEXT LEFT + STACKED IMAGES GRID ===== */
+.bento-grid-text-left {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--bento-gap);
+  width: 100%;
+}
+
+.bento-grid-text-left .bento-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bento-images-stacked {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bento-gap);
+}
+
+.bento-images-stacked .bento-item {
+  flex: 1;
+  height: 200px;
+}
+
+.bento-images-stacked .bento-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== MODAL SYSTEM ===== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+}
+
+.modal--active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.modal__backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+
+.modal__content {
+  position: relative;
+  z-index: 1;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal__close {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 200;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+.modal__close:hover {
+  opacity: 0.7;
+}
+
+/* ===== BASE STYLES ===== */
 a:link {
   text-decoration: none;
 }
@@ -13,21 +192,6 @@ a:hover {
 a:active {
   text-decoration: none;
 }
-
-#close_about{
-  cursor: pointer;
-  font-size: 14px;
-  position: absolute;
-  bottom: 88%;
-  left: 3%;
-  
-}
-
-#close_about2{
-  cursor: pointer;
-  font-size: 50px;
-}
-
 
 body {
   margin: 0px;
@@ -321,16 +485,53 @@ body {
 
 .company-logos {
   display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
 }
 
 .company-logo-placeholder {
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
+  width: 100%;
+  height: 22px;
+  border-radius: 6px;
   background-color: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.company-logo {
+  width: auto;
+  height: 22px;
+  max-width: 100%;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.company-logo--lg {
+  height: 32px;
+}
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0;
+  margin: 40px 80px 20px 80px;
+}
+
+.section-divider-text {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.4);
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+.section-divider-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .skills-list {
@@ -370,8 +571,9 @@ body {
 
 .project-bento {
   display: block;
-  margin: 0 80px 60px 80px;
+  margin: 0 80px 0 80px;
   text-decoration: none;
+  overflow: hidden;
 }
 
 .bento-grid {
@@ -394,7 +596,7 @@ body {
 }
 
 .bento-wide {
-  margin-top: 60px;
+  margin-top: 0;
 }
 
 .bento-grid-wide {
@@ -403,6 +605,7 @@ body {
   grid-template-rows: auto auto;
   gap: 8px;
   width: 100%;
+  overflow: hidden;
 }
 
 .bento-grid-wide .bento-item:nth-child(1) {
@@ -530,7 +733,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 8px;
-  margin: 40px 80px 60px 80px;
+  margin: 0 80px 0 80px;
 }
 
 .current-box {
@@ -542,9 +745,11 @@ body {
 
 .current-label {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 30px;
+  gap: 15px;
 }
 
 .current-label p {
@@ -553,6 +758,12 @@ body {
   font-weight: 400;
   margin: 0;
   text-align: center;
+}
+
+.current-label-logo {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
 }
 
 .current-article {
@@ -1243,18 +1454,6 @@ ul {
   letter-spacing: 3px;
 }
 
-.section-divider {
-  background-color: rgb(20, 20, 20);
-  padding: 50px 0;
-  text-align: center;
-  margin-left: 280px;
-}
-
-.section-divider .log {
-  position: relative;
-  left: auto;
-  top: auto;
-}
 
 
 
