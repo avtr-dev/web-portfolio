@@ -15,10 +15,16 @@
   --color-text: rgba(255, 255, 255, 0.9);
   --color-text-muted: rgba(255, 255, 255, 0.55);
 
-  /* Accent Colors */
-  --accent-nexus: rgb(120, 160, 180);
-  --accent-music: rgb(150, 200, 150);
-  --accent-3d: rgb(180, 150, 200);
+  /* Accent Colors - Sections */
+  --accent-patentspace: #33b78d;   /* Teal - AI/Tech */
+  --accent-setmixer: #ffe762;      /* Amber - Music/Energy */
+  --accent-imperial: #7896C8;      /* Royal Blue - Academic */
+  --accent-personal: #B48CC8;      /* Lavender - Creative */
+
+  /* Legacy (keep for compatibility) */
+  --accent-nexus: var(--accent-imperial);
+  --accent-music: var(--accent-setmixer);
+  --accent-3d: var(--accent-personal);
 
   /* Transitions */
   --transition-fast: 0.2s ease;
@@ -26,6 +32,38 @@
 }
 
 /* ===== ACCENT UTILITIES ===== */
+.bento-accent--patentspace .highlight { color: var(--accent-patentspace); }
+.bento-accent--setmixer .highlight { color: var(--accent-setmixer); }
+.bento-accent--imperial .highlight { color: var(--accent-imperial); }
+.bento-accent--personal .highlight { color: var(--accent-personal); }
+
+/* Action buttons - filled with section accent color */
+.bento-accent--patentspace .tool-tag-action {
+  background: color-mix(in srgb, var(--accent-patentspace) 80%, transparent);
+  border-color: var(--accent-patentspace);
+  color: #fff;
+  text-decoration: none;
+}
+.bento-accent--setmixer .tool-tag-action {
+  background: color-mix(in srgb, var(--accent-setmixer) 80%, transparent);
+  border-color: var(--accent-setmixer);
+  color: #fff;
+  text-decoration: none;
+}
+.bento-accent--imperial .tool-tag-action {
+  background: color-mix(in srgb, var(--accent-imperial) 80%, transparent);
+  border-color: var(--accent-imperial);
+  color: #fff;
+  text-decoration: none;
+}
+.bento-accent--personal .tool-tag-action {
+  background: color-mix(in srgb, var(--accent-personal) 80%, transparent);
+  border-color: var(--accent-personal);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Legacy classes */
 .bento-accent--nexus .highlight { color: var(--accent-nexus); }
 .bento-accent--music .highlight { color: var(--accent-music); }
 .bento-accent--3d .highlight { color: var(--accent-3d); }
@@ -83,7 +121,6 @@
 
 .bento-grid-3col .bento-text {
   height: 350px;
-  max-height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -325,7 +362,7 @@ body {
   bottom: 0;
   pointer-events: none;
   z-index: -1;
-  opacity: 0.7;
+  opacity: 0.35;
   transition: background 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
