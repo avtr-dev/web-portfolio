@@ -82,7 +82,7 @@
 .bento-link-btn {
   margin-top: 0;
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 100;
   background-color: rgba(255,255,255,0.07);
   color: rgba(255,255,255,0.7);
   border: 1px solid rgba(255,255,255,0.13);
@@ -127,7 +127,7 @@ html {
   gap: 6px;
   color: rgba(255,255,255,0.7);
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 100;
   padding: 6px 18px 6px 18px;
   background-color: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.13);
@@ -306,7 +306,7 @@ html {
   gap: 6px;
   color: rgba(255, 255, 255, 0.7);
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 100;
   padding: 6px 18px 6px 12px;
   background-color: rgba(255, 255, 255, 0.07);
   backdrop-filter: blur(18px);
@@ -892,7 +892,7 @@ body {
 .sidebar-label {
   color: rgba(255, 255, 255, 0.4);
   font-size: 11px;
-  font-weight: 400;
+  font-weight: 100;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   margin: 0 0 15px 0;
@@ -1130,7 +1130,7 @@ body {
 
 .bento-contributions {
   font-size: 0.75rem;
-  font-weight: 400;
+  font-weight: 100;
   color: rgba(255, 255, 255, 0.4);
   margin: 0.6rem 0 0 0;
   letter-spacing: 0.02em;
@@ -1163,16 +1163,15 @@ body {
 .tool-tag {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 12px;
-  font-weight: 200;
-  padding: 5px 12px 5px 8px;
+  font-size: 11px;
+  font-weight: 400;
+  padding: 3px 10px 3px 8px;
   background-color: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 20px;
-  font-family: inherit;
-  font-weight: 200;
+  border-radius: 16px;
+  font-family: 'Inconsolata', monospace;
 }
 
 .tool-tag img {
@@ -1209,7 +1208,7 @@ body {
 .current-label p {
   color: rgba(255, 255, 255, 0.5);
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 100;
   margin: 0;
   text-align: center;
 }
@@ -1288,7 +1287,7 @@ body {
 .albums-label-box p {
   color: rgba(255, 255, 255, 0.5);
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 100;
   margin: 0;
   text-align: center;
 }
@@ -1343,7 +1342,7 @@ body {
 .archive-label-box p {
   color: rgba(255, 255, 255, 0.5);
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 100;
   margin: 0;
   text-align: center;
 }
@@ -1766,7 +1765,7 @@ body {
   z-index: 1;
   color: #000000;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 100;
 
 
 }
@@ -2179,7 +2178,7 @@ ul li {
 
 .cvtext {
 
-  font-weight: 400;
+  font-weight: 100;
   color: #000000;
   opacity: 1;
 
@@ -2190,7 +2189,7 @@ ul li {
 
   
 
-  font-weight: 400;
+  font-weight: 100;
   margin-top: 27px;
   color: #000000;
   opacity: 1;
@@ -2748,18 +2747,18 @@ backdrop-filter: blur(1rem);
   /* === SIDEBAR AS VERTICAL BENTO BOX === */
   .primary-header {
     position: relative;
-    width: calc(100% - 48px);
-    max-width: 600px;
+    width: auto;
+    max-width: none;
     left: auto;
-    margin: 24px auto 0 auto;
+    top: auto;
+    bottom: auto;
+    margin: 24px 24px 24px 24px;
     height: auto;
     flex-direction: column;
     align-items: center;
     padding: 28px 24px;
-    border-right: none;
-    border-bottom: none;
-    border-radius: var(--bento-radius);
     border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--bento-radius);
     box-sizing: border-box;
   }
 
@@ -2933,16 +2932,16 @@ backdrop-filter: blur(1rem);
   /* === SIDEBAR: COMPACT BENTO BOX === */
   .primary-header {
     position: relative;
-    width: calc(100% - 40px);
-    max-width: 500px;
+    width: auto;
+    max-width: none;
     left: auto;
-    margin: 20px auto 0 auto;
+    top: auto;
+    bottom: auto;
+    margin: 20px 20px 20px 20px;
     height: auto;
     padding: 24px 20px;
-    border-right: none;
-    border-bottom: none;
-    border-radius: var(--bento-radius);
     border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--bento-radius);
     box-sizing: border-box;
   }
 
@@ -3112,8 +3111,8 @@ backdrop-filter: blur(1rem);
 
   /* Tool tags */
   .tool-tag {
-    font-size: 13px;
-    padding: 6px 14px 6px 10px;
+    font-size: 12px;
+    padding: 4px 10px 4px 6px;
   }
 
   .tool-tag img {
@@ -3972,7 +3971,7 @@ backdrop-filter: blur(1rem);
   .cv_dot .cvtext {
 
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 100;
     margin-top: 27px;
     color: #000000;
     opacity: 1;
@@ -3983,7 +3982,7 @@ backdrop-filter: blur(1rem);
   .folio_dot .foliotext {
 
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 100;
     margin-top: 27px;
     color: #000000;
     opacity: 1;
@@ -4216,12 +4215,17 @@ backdrop-filter: blur(1rem);
 /* Mobile specific */
 @media only screen and (max-width: 768px) {
   .primary-header {
-    width: calc(100% - 48px) !important;
-    max-width: 600px !important;
-    margin: 24px auto 0 auto !important;
+    position: relative !important;
+    width: auto !important;
+    max-width: none !important;
+    left: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    margin: 24px !important;
     flex-direction: column !important;
     align-items: center !important;
     padding: 28px 24px !important;
+    border-radius: var(--bento-radius) !important;
   }
 
   .sidebar-content {
@@ -4243,9 +4247,7 @@ backdrop-filter: blur(1rem);
 /* Small mobile specific */
 @media only screen and (max-width: 480px) {
   .primary-header {
-    width: calc(100% - 40px) !important;
-    max-width: 500px !important;
-    margin: 20px auto 0 auto !important;
+    margin: 20px !important;
     padding: 24px 20px !important;
   }
 
