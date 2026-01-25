@@ -132,7 +132,7 @@
 /* Bento link button style for video/webapp links */
 .bento-link-btn {
   margin-top: 0;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 100;
   background-color: rgba(255,255,255,0.07);
   color: rgba(255,255,255,0.7);
@@ -228,6 +228,7 @@ html, body {
   --accent-setmixer: #fff700;      /* Amber - Music/Energy */
   --accent-imperial: #437bff;      /* Royal Blue - Academic */
   --accent-personal: #a167ff;      /* Lavender - Creative */
+  --accent-blok: #ff9f1c;          /* Orange-Yellow - Music/3D */
 
   /* Legacy (keep for compatibility) */
   --accent-nexus: var(--accent-imperial);
@@ -244,6 +245,7 @@ html, body {
 .bento-accent--setmixer .highlight { color: var(--accent-setmixer); }
 .bento-accent--imperial .highlight { color: var(--accent-imperial); }
 .bento-accent--personal .highlight { color: var(--accent-personal); }
+.bento-accent--blok .highlight { color: var(--accent-blok); }
 
 /* Action buttons - filled with section accent color */
 .bento-accent--patentspace .tool-tag-action {
@@ -267,6 +269,12 @@ html, body {
 .bento-accent--personal .tool-tag-action {
   background: color-mix(in srgb, var(--accent-personal) 80%, transparent);
   border-color: var(--accent-personal);
+  color: #fff;
+  text-decoration: none;
+}
+.bento-accent--blok .tool-tag-action {
+  background: color-mix(in srgb, var(--accent-blok) 80%, transparent);
+  border-color: var(--accent-blok);
   color: #fff;
   text-decoration: none;
 }
@@ -336,6 +344,17 @@ html, body {
   color: #fff;
 }
 
+.bento-accent--blok .tool-tag-link {
+  color: #fff;
+  border-color: var(--accent-blok);
+}
+.bento-accent--blok .tool-tag-link:hover {
+  background: rgba(30, 30, 30, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+}
+
 /* Legacy classes */
 .bento-accent--nexus .highlight { color: var(--accent-nexus); }
 .bento-accent--music .highlight { color: var(--accent-music); }
@@ -397,16 +416,22 @@ html, body {
   color: var(--accent-personal);
 }
 
+.bento-accent--blok .bento-hover-label {
+  color: var(--accent-blok);
+}
+
 /* ===== TALL VIDEO MODIFIER ===== */
 .bento-video--tall {
-  /* aspect-ratio and min-height removed to prevent conflicts */
+  aspect-ratio: unset;
+  min-height: 300px;
   max-width: 100%;
   overflow: hidden;
 }
 
 .bento-video--tall video {
   width: 100%;
-  height: 100px;
+  height: 100%;
+  min-height: 300px;
   max-width: 100%;
   object-fit: cover;
   object-position: top;
@@ -425,6 +450,17 @@ html, body {
 
 .bento-grid-stacked .bento-item:first-child {
   width: 100%;
+}
+
+.bento-grid-stacked .bento-video--tall {
+  height: 600px;
+  max-height: 600px;
+  min-height: unset;
+}
+
+.bento-grid-stacked .bento-video--tall video {
+  height: 600px;
+  max-height: 600px;
 }
 
 .bento-grid-stacked .bento-text {
@@ -1142,6 +1178,16 @@ body {
   object-fit: cover;
 }
 
+.bento-video.bento-video--tall {
+  aspect-ratio: unset;
+  min-height: 300px;
+}
+
+.bento-video.bento-video--tall video {
+  height: 100%;
+  min-height: 300px;
+}
+
 .bento-item img {
   width: 100%;
   height: 100%;
@@ -1217,7 +1263,9 @@ body {
 .bento-tools {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  column-gap: 0.5rem;
+  row-gap: 1.5rem;
+  align-items: center;
   margin-top: 1rem;
   max-width: 100%;
   pointer-events: auto;
@@ -1228,7 +1276,7 @@ body {
   align-items: center;
   gap: 4px;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 400;
   padding: 3px 10px 3px 8px;
   background-color: rgba(255, 255, 255, 0.03);
@@ -2785,7 +2833,8 @@ backdrop-filter: blur(1rem);
   }
   /* Video adjustments */
   .bento-video--tall {
-    /* min-height removed to prevent conflicts */
+    min-height: 300px;
+    aspect-ratio: unset;
   }
 
   /* Fix hardcoded margins */
@@ -2946,7 +2995,7 @@ backdrop-filter: blur(1rem);
   /* Video boxes */
   .bento-video--tall {
     min-height: 300px;
-    aspect-ratio: 16/10;
+    aspect-ratio: unset;
   }
 
   /* Section divider */
@@ -3116,8 +3165,8 @@ backdrop-filter: blur(1rem);
 
   /* Videos */
   .bento-video--tall {
-    min-height: 220px;
-    aspect-ratio: 16/9;
+    min-height: 250px;
+    aspect-ratio: unset;
   }
 
   .bento-video {

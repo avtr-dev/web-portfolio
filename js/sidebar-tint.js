@@ -17,6 +17,7 @@
     'bento-accent--setmixer': '--accent-setmixer',
     'bento-accent--imperial': '--accent-imperial',
     'bento-accent--personal': '--accent-personal',
+    'bento-accent--blok': '--accent-blok',
     'bento-accent--nexus': '--accent-imperial',
     'bento-accent--music': '--accent-setmixer',
     'bento-accent--3d': '--accent-personal'
