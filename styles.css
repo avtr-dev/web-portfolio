@@ -261,15 +261,14 @@ html {
 
 /* ===== TALL VIDEO MODIFIER ===== */
 .bento-video--tall {
-  aspect-ratio: 21/9;
-  min-height: 350px;
+  /* aspect-ratio and min-height removed to prevent conflicts */
   max-width: 100%;
   overflow: hidden;
 }
 
 .bento-video--tall video {
   width: 100%;
-  height: 100%;
+  height: 100px;
   max-width: 100%;
   object-fit: cover;
   object-position: top;
@@ -1133,7 +1132,7 @@ body {
 
 .current-article-text h4 {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
+  font-size: 22px;
   font-weight: 500;
   margin: 0 0 6px 0;
 }
@@ -2605,7 +2604,7 @@ backdrop-filter: blur(1rem);
   }
   /* Video adjustments */
   .bento-video--tall {
-    min-height: 400px;
+    /* min-height removed to prevent conflicts */
   }
 
   /* Fix hardcoded margins */
@@ -2841,7 +2840,7 @@ backdrop-filter: blur(1rem);
   }
 
   .sidebar-link {
-    font-size: 13px;
+    font-size: 22px;
   }
 
   /* Hide nav dots */
