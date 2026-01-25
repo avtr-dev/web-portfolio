@@ -216,12 +216,8 @@
         </span>
       </div>
 
-      <!-- 3D Showreel Video -->
-      <article class="project-bento bento-wide bento-accent--personal" data-tint="#B48CC880" style="margin-bottom: 32px;">
-        <div class="bento-item bento-video bento-video--tall">
-          <video src="images/videos/colour grade 1 (1).mp4" autoplay muted loop playsinline></video>
-        </div>
-      </article>
+      <!-- 3D Showreel Video (Full Viewport Width, Outside Bento) -->
+
       <!-- ===== END BENTO CARDS ===== -->
 
       <!-- PHOTOGRAPHY -->
@@ -244,15 +240,15 @@
       <!-- TOP 9 ALBUMS -->
       <div class="albums-row">
         <div class="albums-label-box">
-          <p>For fun, my (current) album topster</p>
+          <p>For fun, my (current) fav album topster</p>
         </div>
         <div id="albums-grid" class="albums-grid">
           <!-- Rendered by BentoSystem.js -->
         </div>
       </div>
 
-      <!-- ARCHIVE -->
-      <div class="archive-section">
+      <!-- ARCHIVE (hidden) -->
+      <div class="archive-section" style="display:none !important;">
         <div class="archive-label-box">
           <p>An archive of designs and works by me</p>
         </div>
@@ -278,6 +274,11 @@
         <img src="images/logos/AVI LOGO.png" width="200" height="auto" alt="Avi Logo">
       </div>
     </a>
+  </div>
+
+  <!-- ===== SHOWREEL VIDEO AT BOTTOM ===== -->
+  <div class="showreel-viewport-full">
+    <video class="showreel-viewport-video" src="images/videos/colour grade 1 (1).mp4" autoplay muted loop playsinline></video>
   </div>
 
   <!-- ===== ABOUT MODAL ===== -->
@@ -331,6 +332,7 @@
   <script src="js/modal-system.js"></script>
   <script src="js/transitions.js" defer></script>
   <script src="js/sidebar-tint.js" defer></script>
+  <script src="js/sidebar-dynamic.js"></script>
 
 </body>
 </html>
