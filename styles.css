@@ -209,6 +209,7 @@ html, body {
   /* Layout */
   --sidebar-width: 280px;
   --sidebar-left: max(40px, calc(50vw - 700px));
+  --sidebar-right: max(30px, calc(50vw - 700px));
   --sidebar-gap: 20px;
   --bento-gap: 10px;
   --bento-radius: 12px;
@@ -1683,7 +1684,7 @@ body {
 #parent {
   position: relative;
   margin-left: calc(var(--sidebar-left) + var(--sidebar-width) + var(--sidebar-gap));
-  margin-right: 30px;
+  margin-right: var(--sidebar-right);
   width: auto;
   max-width: 1100px;
   box-sizing: border-box;
