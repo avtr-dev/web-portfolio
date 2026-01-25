@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+._*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Source/work files (keep separately)
+*.psd
+*.ai
+*.blend
+*.blend1
+*-original.*
+*_source.*
+
+# Build artifacts
+node_modules/
+dist/
+.cache/
+
+# Large media originals (optional - uncomment if using external hosting)
+# *.mp4

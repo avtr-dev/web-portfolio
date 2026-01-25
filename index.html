@@ -6,15 +6,16 @@
   <title>Avi Tripathi</title>
 
   <!-- Styles -->
+  <link rel="preload" href="https://use.typekit.net/kle5jde.css" as="style">
   <link rel="stylesheet" href="https://use.typekit.net/kle5jde.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.min.css">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
   <!-- Open Graph -->
-  <meta property="og:image" content="images/archive/0900 (1).png">
+  <meta property="og:image" content="images/meta/0900 (1).png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1024">
   <meta property="og:image:height" content="1024">
@@ -26,7 +27,10 @@
 
   <!-- ===== SIDEBAR ===== -->
   <div class="primary-header">
-    <img src="images/profile/IMG_2652.jpeg" alt="Profile Photo" class="profile-photo">
+    <picture>
+      <source srcset="images/profile/IMG_2652.webp" type="image/webp">
+      <img src="images/profile/IMG_2652.jpeg" alt="Profile Photo" class="profile-photo">
+    </picture>
     <div class="sidebar-content">
       <div class="sidebar-section-main">
         <p class="sidebar-intro-statement">Hi I'm <span class="text-white">Avi</span>, a <span class="text-white">Design Engineer</span> specialised in <span class="text-white">UX</span>  <span class="text-white">, ML </span>and <span class="text-white">Full-Stack</span>.</p>
@@ -68,8 +72,8 @@
           <div class="current-article-text">
             <h4>I design ML Apps for Fusion Manufacturing</h4>
             <div class="bento-tools">
-              <span class="tool-tag"><img src="images/SKILLICONS/Figma-logo.svg.png" alt="Figma" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 2px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 2px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 2px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 4px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;">Full Stack</span>
-              <span class="tool-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 4px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;">Python</span>
+              <span class="tool-tag"><img src="images/SKILLICONS/Figma-logo.svg.png" alt="Figma"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">Full Stack</span>
+              <span class="tool-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">Python</span>
             </div>
           </div>
         </a>
@@ -80,9 +84,9 @@
           <div class="current-article-text">
             <h4>I present ML and UX at developer conferences</h4>
             <div class="bento-tools">
-              <span class="tool-tag"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Encoder Models" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 4px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;">Encoder Models</span>
-              <span class="tool-tag"><img src="https://api.iconify.design/simple-icons:openai.svg?color=%23ffffff" alt="LLMs" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 4px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;">LLMs</span>
-              <span class="tool-tag"><img src="images/SKILLICONS/Figma-logo.svg.png" alt="Figma" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 4px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;">Figma</span>
+              <span class="tool-tag"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Encoder Models">Encoder Models</span>
+              <span class="tool-tag"><img src="https://api.iconify.design/simple-icons:openai.svg?color=%23ffffff" alt="LLMs">LLMs</span>
+              <span class="tool-tag"><img src="images/SKILLICONS/Figma-logo.svg.png" alt="Figma">Figma</span>
             </div>
           </div>
         </a>
@@ -96,7 +100,7 @@
       <!-- Section Divider -->
       <div class="section-divider">
         <span class="section-divider-text" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%;">
-          <img src="images/logos/PATENTSPACELOGO.png" alt="PatentSpace" style="height: 32px; vertical-align: middle;">
+          <img src="images/logos/PATENTSPACELOGO.png" alt="PatentSpace" style="height: 32px; vertical-align: middle;" loading="lazy">
           <span style="font-size: 15px; font-weight: 400; color: rgba(255,255,255,0.35); font-family: Arial, Helvetica, sans-serif; letter-spacing: normal; margin-left: auto;">2023–2024</span>
         </span>
       </div>
@@ -110,8 +114,8 @@
           <div class="bento-item bento-text">
             <p class="bento-description">I created <span class="highlight">this UI prototype</span>, and did <span class="highlight">UX interviews, design</span>, <span class="highlight">web development</span>, and <span class="highlight">brand work</span> for this AI powered patent platform — reaching the <span class="highlight-white">finals of the 2024 Mayor's Entrepreneur Competition</span>.</p>
             <div class="bento-tools">
-              <span class="tool-tag"><img src="images/SKILLICONS/Figma-logo.svg.png" alt="Figma" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 4px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;">Figma</span>
-              <span class="tool-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webflow/webflow-original.svg" alt="Webflow" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 4px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;">Webflow</span>
+              <span class="tool-tag"><img src="images/SKILLICONS/Figma-logo.svg.png" alt="Figma">Figma</span>
+              <span class="tool-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webflow/webflow-original.svg" alt="Webflow">Webflow</span>
               <a class="cv-btn bento-link-btn" href="https://youtu.be/Wux71BLlxa4?si=2Oob7S1n58vpQPNq" target="_blank" rel="noopener">View Full Demo</a>
             </div>
           </div>
@@ -120,7 +124,7 @@
 
       <div class="section-divider">
         <span class="section-divider-text" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%;">
-          <img src="images/logos/SETMIXERLOGO.png" alt="SetMixer" style="height: 58px; vertical-align: middle;">
+          <img src="images/logos/SETMIXERLOGO.png" alt="SetMixer" style="height: 58px; vertical-align: middle;" loading="lazy">
           <span style="font-size: 15px; font-weight: 400; color: rgba(255,255,255,0.35); font-family: Arial, Helvetica, sans-serif; letter-spacing: normal; margin-left: auto;">2022–2023</span>
         </span>
       </div>
@@ -131,19 +135,22 @@
           <div class="bento-item bento-text">
             <p class="bento-description">I worked on <span class="highlight">XD Prototyping</span> and <span class="highlight">Full Stack Development</span> of this <span class="highlight-white">live-music web app</span> released to users.</p>
             <div class="bento-tools">
-              <span class="tool-tag"><img src="images/SKILLICONS/Figma-logo.svg.png" alt="Figma" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 2px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 2px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 2px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 4px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;">Full Stack</span>
+              <span class="tool-tag"><img src="images/SKILLICONS/Figma-logo.svg.png" alt="Figma"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">Full Stack</span>
               <a class="cv-btn bento-link-btn" href="https://listen.setmixer.com/" target="_blank" rel="noopener">Visit Live Webapp</a>
             </div>
           </div>
           <a href="#" class="bento-item bento-hover-link">
-            <img src="images/bento/TQu0XCFneemf8rRFW2xFCVTs8.png" alt="SetMixer Screenshot" style="width: 100%; height: 100%; object-fit: cover;" />
+            <picture>
+              <source srcset="images/bento/TQu0XCFneemf8rRFW2xFCVTs8.webp" type="image/webp">
+              <img src="images/bento/TQu0XCFneemf8rRFW2xFCVTs8.png" alt="SetMixer Screenshot" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
+            </picture>
           </a>
         </div>
       </article>
 
       <div class="section-divider">
         <span class="section-divider-text" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%;">
-          <img src="images/logos/Imperial_College_London_new_logo.png" alt="Imperial" style="height: 32px; vertical-align: middle;">
+          <img src="images/logos/Imperial_College_London_new_logo.png" alt="Imperial" style="height: 32px; vertical-align: middle;" loading="lazy">
           <span style="font-size: 15px; font-weight: 400; color: rgba(255,255,255,0.35); font-family: Arial, Helvetica, sans-serif; letter-spacing: normal; margin-left: auto;">2020–2024</span>
         </span>
       </div>
@@ -152,18 +159,21 @@
       <article class="project-bento bento-wide bento-accent--imperial" data-tint="#7896C880" data-skills="product-design,cad,research,prototyping" style="margin-bottom: 32px;">
         <div class="bento-grid-wide bento-video-top">
           <a href="#" class="bento-item bento-video bento-hover-link">
-            <video src="images/videos/Untitled video - Made with Clipchamp (1) (1) (1).mp4" autoplay muted loop playsinline></video>
+            <video data-src="images/videos/Untitled video - Made with Clipchamp (1) (1) (1).mp4" autoplay muted loop playsinline></video>
           </a>
           <div class="bento-item bento-text">
             <p class="bento-description">I did the <span class="highlight">UX design</span> and <span class="highlight">3D rendering</span> for this <span class="highlight-white">future urban mobility concept</span>.</p>
             <div class="bento-tools">
-              <span class="tool-tag"><img src="images/SKILLICONS/blender-original.svg" alt="Blender" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 4px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;">Blender</span>
-              <span class="tool-tag"><img src="images/SKILLICONS/aftereffects-original.svg" alt="After Effects" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 4px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;">After Effects</span>
+              <span class="tool-tag"><img src="images/SKILLICONS/blender-original.svg" alt="Blender">Blender</span>
+              <span class="tool-tag"><img src="images/SKILLICONS/aftereffects-original.svg" alt="After Effects">After Effects</span>
               <a class="cv-btn bento-link-btn" href="https://drive.google.com/file/d/1wDsrPMMSXwCg2vQpp1sjg5FjR_EmiE63/view?usp=sharing" target="_blank" rel="noopener">View Full Concept Video</a>
             </div>
           </div>
           <a href="#" class="bento-item bento-hover-link">
-            <img src="images/bento/Screenshot 2023-03-10 095008.png" alt="NEXUS">
+            <picture>
+              <source srcset="images/bento/Screenshot 2023-03-10 095008.webp" type="image/webp">
+              <img src="images/bento/Screenshot 2023-03-10 095008.png" alt="NEXUS" loading="lazy">
+            </picture>
             </a>
           </div>
         </div>
@@ -173,18 +183,18 @@
       <article class="project-bento bento-wide bento-accent--blok" data-tint="#FF9F1C80" data-skills="3d,ux-design,animation" style="margin-bottom: 32px;">
         <div class="bento-grid-wide bento-video-top">
           <a href="#" class="bento-item bento-video bento-hover-link">
-             <video src="images/archive/BLOK EXPLOSION (1) (1).mp4" autoplay muted loop playsinline></video>
+             <video data-src="images/videos/BLOK EXPLOSION (1) (1).mp4" autoplay muted loop playsinline></video>
           </a>
           <div class="bento-item bento-text">
             <p class="bento-description">I did the <span class="highlight">UX design</span> and <span class="highlight">3D rendering</span> for this <span class="highlight-white">3D Beat Sequencer</span>.</p>
             <div class="bento-tools">
-              <span class="tool-tag"><img src="images/SKILLICONS/blender-original.svg" alt="Blender" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 4px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;">Blender</span>
-              <span class="tool-tag"><img src="images/SKILLICONS/aftereffects-original.svg" alt="After Effects" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 4px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;">After Effects</span>
+              <span class="tool-tag"><img src="images/SKILLICONS/blender-original.svg" alt="Blender">Blender</span>
+              <span class="tool-tag"><img src="images/SKILLICONS/aftereffects-original.svg" alt="After Effects">After Effects</span>
               
             </div>
           </div>
           <a href="#" class="bento-item bento-hover-link">
-            <img src="images/projects/blok1/blok cov mb.png" alt="NEXUS">
+            <img src="images/projects/blok1/blok cov mb.png" alt="BLOK" loading="lazy">
             </a>
           </div>
       </article>
@@ -195,12 +205,12 @@
           <div class="bento-item bento-text">
             <p class="bento-description">I did <span class="highlight">3D Design</span> and <span class="highlight">Promotional Materials</span> for the <span class="highlight-white">Dyson School OPEN HOUSE</span>.</p>
             <div class="bento-tools">
-              <span class="tool-tag"><img src="images/SKILLICONS/blender-original.svg" alt="Blender" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 4px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;">Blender</span>
-              <span class="tool-tag"><img src="images/SKILLICONS/photoshop-original.svg" alt="Photoshop" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 4px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;">Photoshop</span>
+              <span class="tool-tag"><img src="images/SKILLICONS/blender-original.svg" alt="Blender">Blender</span>
+              <span class="tool-tag"><img src="images/SKILLICONS/photoshop-original.svg" alt="Photoshop">Photoshop</span>
             </div>
           </div>
           <div class="bento-item">
-            <video src="images/bento/0100_16.mp4" autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;" alt="Open House"></video>
+            <video data-src="images/bento/0100_16.mp4" autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
           </div>
         </div>
       </article>
@@ -211,16 +221,16 @@
           <div class="bento-item bento-text">
             <p class="bento-description">I did the <span class="highlight">Graphic Design</span> and <span class="highlight">Promo</span> for <span class="highlight-white">society merch releases</span>.</p>
             <div class="bento-tools">
-              <span class="tool-tag"><img src="images/SKILLICONS/photoshop-original.svg" alt="Photoshop" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 4px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;">Photoshop</span>
-              <span class="tool-tag"><img src="images/SKILLICONS/Figma-logo.svg.png" alt="Figma" style="height: 20px; width: 20px; object-fit: contain; display: inline-block; margin-right: 4px; vertical-align: middle; border-radius: 4px; padding: 2px; box-sizing: border-box;">Figma</span>
+              <span class="tool-tag"><img src="images/SKILLICONS/photoshop-original.svg" alt="Photoshop">Photoshop</span>
+              <span class="tool-tag"><img src="images/SKILLICONS/Figma-logo.svg.png" alt="Figma">Figma</span>
             </div>
           </div>
           <div class="bento-images-row">
             <div class="bento-item">
-              <img src="images/bento/CC3D7FA9-9B2A-4AB5-802B-8A939F27B36A_1_201_a.jpeg" alt="Clothing Design">
+              <img src="images/bento/CC3D7FA9-9B2A-4AB5-802B-8A939F27B36A_1_201_a.jpeg" alt="Clothing Design" loading="lazy">
             </div>
             <div class="bento-item">
-              <img src="images/bento/B2732C4A-BDA0-4B9A-91FC-216916B473A1.jpeg" alt="Clothing Design">
+              <img src="images/bento/B2732C4A-BDA0-4B9A-91FC-216916B473A1.jpeg" alt="Clothing Design" loading="lazy">
             </div>
           </div>
         </div>
@@ -231,7 +241,7 @@
 
       <div class="section-divider" style="margin-bottom: 30px;">
         <span class="section-divider-text" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%;">
-          <img src="images/logos/AVI LOGO GREY.png" alt="Personal" style="height: 24px; vertical-align: middle;">
+          <img src="images/logos/AVI LOGO GREY.png" alt="Personal" style="height: 24px; vertical-align: middle;" loading="lazy">
         </span>
       </div>
 
@@ -281,20 +291,11 @@
         </div>
       </div>
 
-      <!-- ARCHIVE (hidden) -->
-      <div class="archive-section" style="display:none !important;">
-        <div class="archive-label-box">
-          <p>An archive of designs and works by me</p>
-        </div>
-        <div id="archive-grid" class="archive-grid">
-          <!-- Rendered by BentoSystem.js -->
-        </div>
-      </div>
 
       <!-- MOBILE VIDEO -->
       <div class="mob-cont">
         <div class="mobile_video">
-          <video src="images/videos/colour_grade_1_AdobeExpress (1).mp4" playsinline autoplay muted loop></video>
+          <video data-src="images/videos/colour_grade_1_AdobeExpress (1).mp4" playsinline autoplay muted loop></video>
         </div>
       </div>
     </div>
@@ -305,14 +306,14 @@
   <div class="logo-container">
     <a href="index.html">
       <div class="logo2">
-        <img src="images/logos/AVI LOGO.png" width="200" height="auto" alt="Avi Logo">
+        <img src="images/logos/AVI LOGO.png" width="200" height="auto" alt="Avi Logo" loading="lazy">
       </div>
     </a>
   </div>
 
   <!-- ===== SHOWREEL VIDEO AT BOTTOM ===== -->
   <div class="showreel-viewport-full">
-    <video class="showreel-viewport-video" src="images/videos/colour grade 1 (1).mp4" autoplay muted loop playsinline></video>
+    <video class="showreel-viewport-video" data-src="images/videos/colour grade 1 (1).mp4" autoplay muted loop playsinline></video>
   </div>
 
   <!-- ===== ABOUT MODAL ===== -->
@@ -322,7 +323,7 @@
       <section class="about">
         <div class="content">
           <div class="about_header">
-            <img src="images/profile/AB01A4D5-209D-4059-8ABD-AC101F07AEBB_1_201_a.jpeg" alt="Profile Photo">
+            <img src="images/profile/AB01A4D5-209D-4059-8ABD-AC101F07AEBB_1_201_a.jpeg" alt="Profile Photo" loading="lazy">
           </div>
           <div class="text">
             <h1>Avi Tripathi</h1>
@@ -361,12 +362,7 @@
   </div>
 
   <!-- ===== SCRIPTS ===== -->
-  <script src="js/tool-tags.js"></script>
-  <script src="js/bento-system.js"></script>
-  <script src="js/modal-system.js"></script>
-  <script src="js/transitions.js" defer></script>
-  <script src="js/sidebar-tint.js" defer></script>
-  <script src="js/sidebar-dynamic.js"></script>
+  <script src="js/bundle.min.js" defer></script>
 
 </body>
 </html>

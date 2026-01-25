@@ -32,3 +32,22 @@ document.addEventListener('DOMContentLoaded', function () {
   // Removed sidebar fadeout at the bottom of the page
   // ...existing code...
 });
+
+// Lazy load videos - only load when they come into viewport
+document.addEventListener('DOMContentLoaded', function () {
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const video = entry.target;
+        if (video.dataset.src && !video.src) {
+          video.src = video.dataset.src;
+          video.load();
+          video.play().catch(() => {});
+        }
+        videoObserver.unobserve(video);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '100px' });
+
+  document.querySelectorAll('video[data-src]').forEach(v => videoObserver.observe(v));
+});
