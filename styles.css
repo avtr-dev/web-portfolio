@@ -168,8 +168,8 @@ html {
   --color-text-muted: rgba(255, 255, 255, 0.55);
 
   /* Accent Colors - Sections */
-  --accent-patentspace: #33b78d;   /* Teal - AI/Tech */
-  --accent-setmixer: #ffe762;      /* Amber - Music/Energy */
+  --accent-patentspace: #00ffbb;   /* Teal - AI/Tech */
+  --accent-setmixer: #fff700;      /* Amber - Music/Energy */
   --accent-imperial: #7896C8;      /* Royal Blue - Academic */
   --accent-personal: #B48CC8;      /* Lavender - Creative */
 
@@ -1105,9 +1105,9 @@ body {
 }
 
 .bento-description {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.828);
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.5;
   margin: 0;
   text-align: left;
@@ -1117,12 +1117,12 @@ body {
 }
 
 .bento-description .highlight {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .bento-title {
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.9);
   margin: 0 0 0.6rem 0;
   letter-spacing: 0.02em;
