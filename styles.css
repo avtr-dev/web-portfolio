@@ -1,50 +1,3 @@
-.bento-carousel-fullwidth {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  box-sizing: border-box;
-  padding-left: 0;
-  padding-right: 0;
-}
-/* Simple horizontal scroll carousel for photography section */
-.bento-carousel-scroll {
-  display: flex;
-  flex-direction: row;
-  gap: 0;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 0;
-  -webkit-overflow-scrolling: touch;
-  width: 100vw;
-  box-sizing: border-box;
-  padding-left: 120px;
-  padding-right: 120px;
-}
-.bento-carousel-scroll .bento-item {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  height: 220px;
-  border-radius: 0;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.bento-carousel-scroll .bento-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background: #181818;
-  border-radius: 0;
-  display: block;
-  margin: 0;
-  padding: 0;
-}
 /* White highlight for special emphasis (matches .highlight weight) */
 .highlight-white {
   color: #fffffff6;
@@ -1287,10 +1240,15 @@ body {
 }
 
 .tool-tag img {
-  width: 16px;
-  height: 16px;
+  height: 20px;
+  width: 20px;
   object-fit: contain;
-  opacity: 0.6;
+  display: inline-block;
+  margin-right: 4px;
+  vertical-align: middle;
+  border-radius: 4px;
+  padding: 2px;
+  box-sizing: border-box;
 }
 
 /* Currently Working On Row */
@@ -1343,7 +1301,7 @@ body {
   border-color: rgba(255, 255, 255, 0.08);
 }
 
-.current-article img {
+.current-article > img {
   width: 100%;
   height: 120px;
   object-fit: cover;
@@ -3241,7 +3199,7 @@ backdrop-filter: blur(1rem);
   }
 
   /* Current article cards */
-  .current-article img {
+  .current-article > img {
     height: 120px;
   }
 
