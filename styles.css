@@ -40,6 +40,7 @@
   background: #000;
   overflow: hidden;
   z-index: 1;
+  border-top: 0.5px solid #fff;
 }
 
 .showreel-viewport-video {
