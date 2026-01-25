@@ -1,3 +1,8 @@
+/* White highlight for special emphasis (matches .highlight weight) */
+.highlight-white {
+  color: #fffffff6;
+  font-weight: 400;
+}
 /* Fade in on load for sidebar and first content */
 .fade-in-onload {
   opacity: 0;
@@ -170,8 +175,8 @@ html {
   /* Accent Colors - Sections */
   --accent-patentspace: #00ffbb;   /* Teal - AI/Tech */
   --accent-setmixer: #fff700;      /* Amber - Music/Energy */
-  --accent-imperial: #7896C8;      /* Royal Blue - Academic */
-  --accent-personal: #B48CC8;      /* Lavender - Creative */
+  --accent-imperial: #437bff;      /* Royal Blue - Academic */
+  --accent-personal: #a167ff;      /* Lavender - Creative */
 
   /* Legacy (keep for compatibility) */
   --accent-nexus: var(--accent-imperial);
