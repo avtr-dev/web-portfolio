@@ -3171,6 +3171,12 @@ backdrop-filter: blur(1rem);
     aspect-ratio: unset;
   }
 
+  .bento-grid-stacked .bento-video--tall,
+  .bento-grid-stacked .bento-video--tall video {
+    height: 200px;
+    max-height: 200px;
+  }
+
   .bento-video {
     aspect-ratio: 16/9;
   }
