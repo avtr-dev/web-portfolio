@@ -92,6 +92,7 @@
   align-items: center;
   gap: 7px;
   cursor: pointer;
+  pointer-events: auto;
   transition: background 0.2s, color 0.2s, border 0.2s;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
   outline: none;
@@ -133,6 +134,7 @@ html {
   border-radius: 8px;
   font-family: inherit;
   cursor: pointer;
+  pointer-events: auto;
   transition: background 0.2s, color 0.2s, border 0.2s;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
   outline: none;
@@ -287,7 +289,8 @@ html {
   display: block;
   text-decoration: none;
   overflow: hidden;
-  cursor: pointer;
+  cursor: default;
+  pointer-events: none;
 }
 
 .bento-hover-label {
@@ -312,8 +315,7 @@ html {
   text-decoration: none;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
   z-index: 2;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s, border 0.2s;
+  cursor: default;
 }
   background-color: rgba(255,255,255,0.16);
   color: #fff;
@@ -572,6 +574,14 @@ a:hover {
 
 a:active {
   text-decoration: none;
+}
+
+/* Disable pointer cursor on non-clickable links */
+a[href="#"],
+.project-bento a:not(.cv-btn):not(.bento-link-btn),
+.current-row a:not(.cv-btn):not(.bento-link-btn) {
+  cursor: default;
+  pointer-events: none;
 }
 
 body {
@@ -1053,11 +1063,10 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
 }
 
 .bento-item img:hover {
-  transform: scale(1.05);
+  transform: none;
 }
 
 .bento-text {
@@ -1072,6 +1081,7 @@ body {
   overflow: hidden;
   box-sizing: border-box;
   max-width: 100%;
+  pointer-events: auto;
 }
 
 .bento-description {
@@ -1127,6 +1137,7 @@ body {
   gap: 0.5rem;
   margin-top: 1rem;
   max-width: 100%;
+  pointer-events: auto;
 }
 
 .tool-tag {
@@ -1193,11 +1204,12 @@ body {
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  transition: border-color 0.3s ease;
+  cursor: default;
+  pointer-events: none;
 }
 
 .current-article:hover {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: inherit;
 }
 
 .current-article img {
@@ -1374,7 +1386,7 @@ body {
 }
 
 .bento-image-hover:hover .bento-hover-overlay {
-  opacity: 1;
+  opacity: 0;
 }
 
 .bento-hover-link {
@@ -1383,11 +1395,11 @@ body {
   letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  transition: color 0.2s ease;
+  cursor: default;
 }
 
 .bento-hover-link:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .bento-link {
@@ -1397,11 +1409,11 @@ body {
   letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.45);
   text-decoration: none;
-  transition: color 0.2s ease;
+  cursor: default;
 }
 
 .bento-link:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 0.45);
 }
 
 
@@ -1840,9 +1852,9 @@ ul {
   font-weight: 100;
 }
 
-/* hover */
+/* hover disabled */
 .image-gallery li:hover .overlay {
-  opacity: 1;
+  opacity: 0;
 }
 
 /* Projects container styles */
@@ -1856,11 +1868,11 @@ ul {
   display: block;
   text-decoration: none;
   margin-bottom: 30px;
-  transition: transform 0.3s ease;
+  cursor: default;
 }
 
 .project-card:hover {
-  transform: scale(1.01);
+  transform: none;
 }
 
 .project-image {
