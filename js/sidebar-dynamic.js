@@ -29,20 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
   const sidebar = document.querySelector('.primary-header');
 
-  function atPageBottom() {
-    // Allow a 2px threshold for floating point errors
-    return (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 2);
-  }
-
-  function updateSidebar() {
-    if (!sidebar) return;
-    if (atPageBottom()) {
-      sidebar.classList.add('sidebar-fade-out');
-    } else {
-      sidebar.classList.remove('sidebar-fade-out');
-    }
-  }
-
-  window.addEventListener('scroll', updateSidebar);
-  window.addEventListener('resize', updateSidebar);
+  // Removed sidebar fadeout at the bottom of the page
+  // ...existing code...
 });
