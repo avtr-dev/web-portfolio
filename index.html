@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="styles.min.css">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
+  <!-- Preload LCP image -->
+  <link rel="preload" as="image" href="images/current/pdm-collection-manufacturing-mobile-banner-560x315 2.webp" type="image/webp">
+
   <!-- Open Graph -->
   <meta property="og:image" content="images/meta/0900 (1).png">
   <meta property="og:image:type" content="image/png">
@@ -68,7 +71,10 @@
       <!-- CURRENTLY WORKING ON -->
       <div class="current-row">
         <a href="#" class="current-box current-article">
-          <img src="images/current/pdm-collection-manufacturing-mobile-banner-560x315 2.jpeg" alt="">
+          <picture>
+            <source srcset="images/current/pdm-collection-manufacturing-mobile-banner-560x315 2.webp" type="image/webp">
+            <img src="images/current/pdm-collection-manufacturing-mobile-banner-560x315 2.jpeg" alt="" fetchpriority="high">
+          </picture>
           <div class="current-article-text">
             <h4>I design ML Apps for Fusion Manufacturing</h4>
             <div class="bento-tools">
@@ -80,7 +86,10 @@
 
 
         <a href="#" class="current-box current-article">
-          <img src="images/current/ece80842-66da-48ad-8e27-1b278086fb4e.JPG" alt="">
+          <picture>
+            <source srcset="images/current/ece80842-66da-48ad-8e27-1b278086fb4e.webp" type="image/webp">
+            <img src="images/current/ece80842-66da-48ad-8e27-1b278086fb4e.JPG" alt="" loading="lazy">
+          </picture>
           <div class="current-article-text">
             <h4>I present ML and UX at developer conferences</h4>
             <div class="bento-tools">
@@ -227,10 +236,16 @@
           </div>
           <div class="bento-images-row">
             <div class="bento-item">
-              <img src="images/bento/CC3D7FA9-9B2A-4AB5-802B-8A939F27B36A_1_201_a.jpeg" alt="Clothing Design" loading="lazy">
+              <picture>
+                <source srcset="images/bento/CC3D7FA9-9B2A-4AB5-802B-8A939F27B36A_1_201_a.webp" type="image/webp">
+                <img src="images/bento/CC3D7FA9-9B2A-4AB5-802B-8A939F27B36A_1_201_a.jpeg" alt="Clothing Design" loading="lazy">
+              </picture>
             </div>
             <div class="bento-item">
-              <img src="images/bento/B2732C4A-BDA0-4B9A-91FC-216916B473A1.jpeg" alt="Clothing Design" loading="lazy">
+              <picture>
+                <source srcset="images/bento/B2732C4A-BDA0-4B9A-91FC-216916B473A1.webp" type="image/webp">
+                <img src="images/bento/B2732C4A-BDA0-4B9A-91FC-216916B473A1.jpeg" alt="Clothing Design" loading="lazy">
+              </picture>
             </div>
           </div>
         </div>

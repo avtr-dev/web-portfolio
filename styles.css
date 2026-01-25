@@ -1301,7 +1301,8 @@ body {
   border-color: rgba(255, 255, 255, 0.08);
 }
 
-.current-article > img {
+.current-article > img,
+.current-article > picture img {
   width: 100%;
   height: 120px;
   object-fit: cover;
@@ -3199,7 +3200,8 @@ backdrop-filter: blur(1rem);
   }
 
   /* Current article cards */
-  .current-article > img {
+  .current-article > img,
+  .current-article > picture img {
     height: 120px;
   }
 
