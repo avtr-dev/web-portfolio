@@ -1,1 +1,1 @@
-: [Web Portfolio](avitripathi.com)
+[Web Portfolio](https://avitripathi.com)
